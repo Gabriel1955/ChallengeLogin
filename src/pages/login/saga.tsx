@@ -1,11 +1,11 @@
-import { all, call, delay, put, take, takeLatest } from 'redux-saga/effects'
+import { call, put, takeLatest } from 'redux-saga/effects'
 import { actionTypes, setUser } from './actions'
-import HTTP from "../../service"
+import HTTP from '../../service'
 
 function* login(data) {
   try {
     const { Username, Password } = data.payload
-    const response = yield call(HTTP.post, "/login", {
+    const response = yield call(HTTP.post, '/login', {
       Username,
       Password,
     })
@@ -17,8 +17,6 @@ function* login(data) {
   }
 }
 
-export default function*() {
-  yield [
-     yield takeLatest(actionTypes.SIGN_IN_REQUEST, login),
-  ]
+export default function* () {
+  yield [yield takeLatest(actionTypes.SIGN_IN_REQUEST, login)]
 }

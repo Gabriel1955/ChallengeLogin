@@ -1,9 +1,9 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const Row = styled.div`
-  display: flex
+  display: flex;
 `
 
 export const Col = styled.div`
-  flex : ${(porps)=> porps.size}
+  flex: ${(porps) => porps.size};
 `

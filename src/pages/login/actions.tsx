@@ -1,4 +1,3 @@
-
 export const actionTypes = {
   SIGN_IN_REQUEST: 'SIGN_IN_REQUEST',
   SET_USER: 'SET_USER',
@@ -11,9 +10,9 @@ export function signInRequest(Username, Password) {
   }
 }
 
-export function setUser(User){
+export function setUser(User) {
   return {
     type: actionTypes.SET_USER,
-    paylload:{User}
+    paylload: { User },
   }
 }

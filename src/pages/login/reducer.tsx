@@ -1,7 +1,7 @@
 import { actionTypes } from './actions'
 
-const INITIAL_STATE ={
-  User: {}
+const INITIAL_STATE = {
+  User: {},
 }
 
 function reducer(state = INITIAL_STATE, action) {
@@ -13,7 +13,7 @@ function reducer(state = INITIAL_STATE, action) {
     case actionTypes.SET_USER:
       return {
         ...state,
-        ...{ User: action.paylload.User}
+        ...{ User: action.paylload.User },
       }
     default:
       return state

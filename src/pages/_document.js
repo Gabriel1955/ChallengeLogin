@@ -32,7 +32,13 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+           <link
+            href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+            rel="stylesheet"
+            key="google-font-cabin"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />

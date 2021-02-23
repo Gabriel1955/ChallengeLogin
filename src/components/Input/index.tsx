@@ -1,8 +1,10 @@
-import { InputStyled } from "./styles"
-
+import { InputStyled, ContentInput } from './styles'
 
 export default function Input(_props) {
   return (
-      <InputStyled {..._props}/>
-    ) 
+    <ContentInput>
+      <InputStyled {..._props} Invalideted={true} />
+      {/* <div>X</div> */}
+    </ContentInput>
+  )
 }

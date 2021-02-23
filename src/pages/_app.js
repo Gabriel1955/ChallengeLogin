@@ -7,7 +7,6 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     background: #FAF5FF;
     font-family: Montserrat;
-
   }
 `
 
