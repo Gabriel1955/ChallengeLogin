@@ -1,19 +1,26 @@
-Para executar a aplicação deve baixar ou clonar o diretório e executar os seguintes comandos consecutivamente.
-npm install
-npm run dev
+<h2>Instalação</h2>
+
+Para executar a aplicação deve baixar ou clonar o diretório e executar consecutivamente no terminal os seguintes comandos .
+<p>npm install</p>
+<p>npm run dev<p>
 
 Para executar os testes após executar a aplicação:
-npm run cypress:open
+<p>npm run cypress:open<p>
  ou 
-npm run cypress:run
+<p>npm run cypress:run<p>
 
 Necessário ter instalado Node.js, versão 12.0 ou mais recente
+
+<h2>Funcionamento</h2>
 
 Ao acessar a tela home o usuário será direcionado para página de login, ao preencher os campos de E-mail e Senha, com quaisquer dados, o usuário é redirecionado para página home.
 
 Para fazer logout do usuário, na página home deve apertar F5. O token de usuário não está sendo salvo no localstorage.
 
-Para acessar esta aplicação acesse o link:
+<h2>Acesso</h2>
+
+<p>Para acessar esta aplicação acesse o link:<p>
+<p>https://challenge-login-phi.vercel.app/login</p>
 
 
 
