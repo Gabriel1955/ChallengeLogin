@@ -13,13 +13,13 @@ export function signInRequest(Username: string, Password: string): unknown {
   }
 }
 
-export function setUser(User: User): unknown {
+export function setUser(User: User) {
   return {
     type: actionTypes.SET_USER,
     paylload: { User },
   }
 }
-export function setError(message: string): unknown {
+export function setError(message: string) {
   return {
     type: actionTypes.SIGN_IN_ERROR,
     paylload: { Message: message },

@@ -1,8 +1,7 @@
 import { useState, useEffect, ReactElement } from 'react'
 import { FormControl, TextInvalid } from './styles'
-import { useSelector } from 'react-redux'
 
-export default function Form(_props: HTMLElement): ReactElement {
+export default function Form(_props): ReactElement {
   const [childrens, setChildrens] = useState([])
   const [listInvalid, setListInvalid] = useState([])
   const [reload, setReload] = useState(false)

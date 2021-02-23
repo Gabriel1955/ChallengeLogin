@@ -76,8 +76,8 @@ export const FormContent = styled.div`
   @media (max-width: 767px) {
     padding: 5% 7% 0 7%;
     z-index: 2;
-   
-    background:  linear-gradient(0deg, #130525 75px, #faf5ff 10px);
+
+    background: linear-gradient(0deg, #130525 75px, #faf5ff 10px);
     border-radius: 8px;
   }
   @media (min-width: 768px) {
