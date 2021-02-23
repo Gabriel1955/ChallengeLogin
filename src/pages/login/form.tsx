@@ -12,12 +12,14 @@ function FormLogin({ onsubmit }): ReactElement {
         </Title>
         <SubTitle>Para acessar a plataforma, faça seu login.</SubTitle>
         <Input
+          data-cy="input-username"
           name="Username"
           placeholder="user.name@mail.com"
           label="E-MAIL"
           rules={[{ required: true, message: 'Digite um email' }]}
         />
         <Input
+          data-cy="input-password"
           name="Password"
           placeholder="****"
           label="SENHA"
@@ -25,7 +27,10 @@ function FormLogin({ onsubmit }): ReactElement {
           rules={[{ required: true, message: 'Digite uma senha' }]}
         />
         <ContainerButton>
-          <Button>Entrar</Button>
+          <Button 
+            data-cy="button-submit">
+              Entrar
+          </Button>
         </ContainerButton>
         <Footer>
           Esqueceu seu login ou senha? Clique <Link>aqui</Link>
