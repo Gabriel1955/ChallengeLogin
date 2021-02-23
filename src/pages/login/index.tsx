@@ -1,33 +1,37 @@
-import { Background, BackgroundForm, Content, Aside } from './styles'
+import { ContainerAside, ContainerForm, ContainerLogin } from './styles'
+import { Aside, Content } from '../../components'
 import Form from './form'
 import { useDispatch, useSelector } from 'react-redux'
-import { signInRequest } from './actions'
-import { useEffect } from 'react'
+import { signInRequest } from './store/actions'
+import { ReactElement, useEffect } from 'react'
 import { useRouter } from 'next/router'
+import { User } from '../../interfaces/User'
 
-export default function Login() {
+export default function Login(): ReactElement {
   const dispatch = useDispatch()
-  const User = useSelector((state) => state.User)
+  const User: User = useSelector((state) => state.User)
   const router = useRouter()
   useEffect(() => {
     if (User.Name) {
       router.push('/')
     }
-  }, [User])
+  }, [User, router])
 
-  const handleSubmmit = async (payload) => {
+  const handleSubmmit = (payload): void => {
     const { Username, Password } = payload
     dispatch(signInRequest(Username, Password))
   }
 
   return (
-    <Content>
-      <Background>
-        <Aside />
-      </Background>
-      <BackgroundForm>
-        <Form onsubmit={handleSubmmit} />
-      </BackgroundForm>
+    <Content show={!User.Name}>
+      <ContainerLogin>
+        <ContainerAside>
+          <Aside />
+        </ContainerAside>
+        <ContainerForm>
+          <Form onsubmit={handleSubmmit} />
+        </ContainerForm>
+      </ContainerLogin>
     </Content>
   )
 }

@@ -1,8 +1,9 @@
-import { Title, SubTitle, Footer, FormContent } from './styles'
+import { Footer, FormContent, ContainerButton, Link } from './styles'
 
-import { Input, Form, Button } from '../../components'
+import { Input, Form, Button, Title, SubTitle } from '../../components'
+import { ReactElement } from 'react'
 
-const FormLogin = ({ onsubmit }) => {
+function FormLogin({ onsubmit }): ReactElement {
   return (
     <FormContent>
       <Form onsubmit={onsubmit}>
@@ -23,8 +24,12 @@ const FormLogin = ({ onsubmit }) => {
           type="password"
           rules={[{ required: true, message: 'Digite uma senha' }]}
         />
-        <Button>Entrar</Button>
-        <Footer>Esqueceu seu login ou senha? Clique aqui</Footer>
+        <ContainerButton>
+          <Button>Entrar</Button>
+        </ContainerButton>
+        <Footer>
+          Esqueceu seu login ou senha? Clique <Link>aqui</Link>
+        </Footer>
       </Form>
     </FormContent>
   )

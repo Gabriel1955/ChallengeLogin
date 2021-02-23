@@ -1,20 +1,24 @@
-import { useEffect } from 'react'
+import { ReactElement, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useRouter } from 'next/router'
-import { Content } from './styles'
+import { ContainerHome } from './styles'
+import { Content } from '../../components'
+import { User } from '../../interfaces/User'
 
-export default function Home() {
-  const User = useSelector((state) => state.User)
+export default function Home(): ReactElement {
+  const User: User = useSelector((state) => state.User)
   const router = useRouter()
   useEffect(() => {
     if (!User.Name) {
       router.push('/login')
     }
-  }, [User])
+  }, [User, router])
 
   return (
-    <Content>
-      <h1>{`Bem Vindo, ${User.Name}`} </h1>
+    <Content show={User.Name}>
+      <ContainerHome>
+        <h1>{`Bem Vindo, ${User.Name}`} </h1>
+      </ContainerHome>
     </Content>
   )
 }

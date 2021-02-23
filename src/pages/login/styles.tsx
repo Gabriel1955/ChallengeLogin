@@ -1,64 +1,41 @@
 import styled from 'styled-components'
 
-export const Title = styled.div`
-  font-style: normal;
-  font-weight: normal;
-  color: #383e71;
+export const ContainerButton = styled.div`
   @media (max-width: 767px) {
-    font-size: 24px;
-    line-height: 32px;
-    text-align: center;
+    padding: 0 20% 0 20%;
+    margin-top: 3vh;
   }
-  @media (min-width: 1024px) {
-    font-size: 40px;
-    line-height: 48px;
-  }
-`
-export const SubTitle = styled.h4`
-  font-style: normal;
-  font-weight: 600;
-  color: #989fdb;
-  @media (max-width: 767px) {
-    font-size: 12px;
-    line-height: 20px;
-    text-align: center;
-  }
-  @media (min-width: 1024px) {
-    font-size: 16px;
-    line-height: 20px;
+  @media (min-width: 768px) {
+    margin-top: 3vh;
   }
 `
 export const Footer = styled.div`
   font-style: normal;
   font-weight: normal;
   text-align: center;
+  padding: 0 15% 0 15%;
   @media (max-width: 767px) {
     font-size: 14px;
     line-height: 20px;
     color: #ffffff;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     margin-top: 32px;
     font-size: 14px;
     line-height: 20px;
     color: #989fdb;
   }
 `
-export const Aside = styled.div`
-  background-image: linear-gradient(0deg, #130525 0%, rgba(105, 57, 153, 0) 100%),
-    url('/assets/img_background.png');
-  background-size: cover;
+export const Link = styled.span`
+  text-decoration: underline;
   @media (max-width: 767px) {
-    position: relative;
-    z-index: 1;
-    height: 60vh;
+    color: #ffffff;
   }
-  @media (min-width: 1024px) {
-    flex: 2;
-    height: 100vh;
+  @media (min-width: 768px) {
+    color: #9d25b0;
   }
 `
-export const Background = styled.div`
+export const ContainerAside = styled.div`
   @media (max-width: 767px) {
     flex: 1;
     position: relative;
@@ -66,37 +43,48 @@ export const Background = styled.div`
     z-index: 1;
     background-color: #130525;
   }
+  @media (min-width: 768px) {
+    flex: 4;
+  }
   @media (min-width: 1024px) {
     flex: 3;
   }
 `
-export const BackgroundForm = styled.div`
+export const ContainerForm = styled.div`
   @media (max-width: 767px) {
     z-index: 2;
     position: absolute;
     top: 22%;
     width: 80%;
     height: 22pc;
-    background: #faf5ff;
     border-radius: 8px;
     flex: 2;
+  }
+  @media (min-width: 768px) {
+    flex: 5;
   }
   @media (min-width: 1024px) {
     flex: 2;
   }
 `
+
 export const FormContent = styled.div`
   justify-content: center;
 
   @media (max-width: 767px) {
-    padding: 0 7% 0 7%;
+    padding: 5% 7% 0 7%;
     z-index: 2;
+    background-color: #faf5ff;
+    border-radius: 8px;
+  }
+  @media (min-width: 768px) {
+    padding: 50% 15% 0 15%;
   }
   @media (min-width: 1024px) {
     padding: 28% 35% 0 20%;
   }
 `
-export const Content = styled.div`
+export const ContainerLogin = styled.div`
   display: flex;
   justify-content: center;
   @media (max-width: 767px) {

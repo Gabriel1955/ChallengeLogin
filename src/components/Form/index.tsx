@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, ReactElement } from 'react'
 import { FormControl, TextInvalid } from './styles'
 
-export default function Form(_props) {
+export default function Form(_props: HTMLElement): ReactElement {
   const [childrens, setChildrens] = useState([])
   const [listInvalid, setListInvalid] = useState([])
   const [reload, setReload] = useState(false)
 
-  function validateFields(event) {
-    let res = true
+  function validateFields(event: React.SyntheticEvent<EventTarget>): boolean {
+    let isValidForm = true
     childrens.map((children, index) => {
       const props = children.props
       listInvalid[index] = false
@@ -15,8 +15,13 @@ export default function Form(_props) {
         props.rules.forEach((rule) => {
           if (rule.required) {
             if (event.target[props.name].value === '') {
+              event.target[props.name].style.border = '1px solid #ff377f'
+              event.target[props.name].style['z-index'] = 2
               listInvalid[index] = rule.message
-              res = false
+              isValidForm = false
+            } else {
+              event.target[props.name].style.border = ''
+              event.target[props.name].style['z-index'] = 3
             }
           }
         })
@@ -24,10 +29,10 @@ export default function Form(_props) {
       setListInvalid(listInvalid)
     })
     setReload(!reload)
-    return res
+    return isValidForm
   }
 
-  function onSubmit(event) {
+  function onSubmit(event: React.SyntheticEvent<EventTarget>): void {
     event.preventDefault()
     const validated = validateFields(event)
     if (validated) {
@@ -50,17 +55,19 @@ export default function Form(_props) {
     } else {
       setChildrens([_props.children])
     }
-  }, [reload])
+  }, [_props.children])
 
   return (
     <form onSubmit={onSubmit} action="#0">
-      {childrens.map((Children, index) => (
-        <FormControl key={index}>
-          {Children.props.label && <label>{Children.props.label}</label>}
-          {Children}
-          {listInvalid[index] && <TextInvalid>{listInvalid[index]}</TextInvalid>}
-        </FormControl>
-      ))}
+      {childrens.map((Children, index) => {
+        return (
+          <FormControl key={index}>
+            {Children.props.label && <label>{Children.props.label}</label>}
+            {Children}
+            {listInvalid[index] && <TextInvalid>{listInvalid[index]}</TextInvalid>}
+          </FormControl>
+        )
+      })}
     </form>
   )
 }

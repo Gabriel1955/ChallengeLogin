@@ -1,8 +1,8 @@
 import { call, put, takeLatest } from 'redux-saga/effects'
 import { actionTypes, setUser } from './actions'
-import HTTP from '../../service'
+import HTTP from '../../../http'
 
-function* login(data) {
+function* login(data): unknown {
   try {
     const { Username, Password } = data.payload
     const response = yield call(HTTP.post, '/login', {
