@@ -1,9 +1,14 @@
 import { call, put, takeLatest } from 'redux-saga/effects'
-import { actionTypes, setUser } from './actions'
+import { actionTypes, setUser, setError } from './actions'
 import HTTP from '../../../http'
 
 function* login(data): unknown {
   try {
+    // this IF is used to simulate backend error
+    if (data.payload.Username === 'Error') {
+      throw { message: 'E-mail inválido' }
+    }
+
     const { Username, Password } = data.payload
     const response = yield call(HTTP.post, '/login', {
       Username,
@@ -11,9 +16,7 @@ function* login(data): unknown {
     })
     yield put(setUser(response.data))
   } catch (err) {
-    // const { intl } = payload
-    // yield put(actions.login.error(err))
-    // yield call(notificationError, { err, intl, id: 'error.users.load' })
+    yield put(setError(err.message))
   }
 }
 

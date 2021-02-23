@@ -10,9 +10,9 @@ export const ButtonStyled = styled.button`
   height: 48px;
   width: 100%;
   border-radius: 8px;
-  outline: none;
   box-shadow: 0px 0px 0px #989fdb;
-
+  border: none;
+  cursor: pointer;
   background: linear-gradient(267.79deg, #383e71 0%, #9d25b0 99.18%);
   &:focus {
     outline: none;

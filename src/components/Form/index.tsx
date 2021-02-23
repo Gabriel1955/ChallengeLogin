@@ -1,5 +1,6 @@
 import { useState, useEffect, ReactElement } from 'react'
 import { FormControl, TextInvalid } from './styles'
+import { useSelector } from 'react-redux'
 
 export default function Form(_props: HTMLElement): ReactElement {
   const [childrens, setChildrens] = useState([])
@@ -55,10 +56,10 @@ export default function Form(_props: HTMLElement): ReactElement {
     } else {
       setChildrens([_props.children])
     }
-  }, [_props.children])
+  }, [_props.children, reload])
 
   return (
-    <form onSubmit={onSubmit} action="#0">
+    <form onSubmit={onSubmit}>
       {childrens.map((Children, index) => {
         return (
           <FormControl key={index}>

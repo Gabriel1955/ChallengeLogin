@@ -18,6 +18,9 @@ export default function Home(): ReactElement {
     <Content show={User.Name}>
       <ContainerHome>
         <h1>{`Bem Vindo, ${User.Name}`} </h1>
+        <h2>Esta página está em construção</h2>
+        <h2>Entre em contato com o desenvolvedor</h2>
+        <h2>Aperte F5 para logout</h2>
       </ContainerHome>
     </Content>
   )

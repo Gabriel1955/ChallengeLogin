@@ -1,5 +1,4 @@
 import { Footer, FormContent, ContainerButton, Link } from './styles'
-
 import { Input, Form, Button, Title, SubTitle } from '../../components'
 import { ReactElement } from 'react'
 
@@ -27,10 +26,7 @@ function FormLogin({ onsubmit }): ReactElement {
           rules={[{ required: true, message: 'Digite uma senha' }]}
         />
         <ContainerButton>
-          <Button 
-            data-cy="button-submit">
-              Entrar
-          </Button>
+          <Button data-cy="button-submit">Entrar</Button>
         </ContainerButton>
         <Footer>
           Esqueceu seu login ou senha? Clique <Link>aqui</Link>

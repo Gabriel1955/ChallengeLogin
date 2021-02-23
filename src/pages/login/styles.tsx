@@ -15,6 +15,7 @@ export const Footer = styled.div`
   text-align: center;
   padding: 0 15% 0 15%;
   @media (max-width: 767px) {
+    margin-top: 15px;
     font-size: 14px;
     line-height: 20px;
     color: #ffffff;
@@ -28,6 +29,7 @@ export const Footer = styled.div`
 `
 export const Link = styled.span`
   text-decoration: underline;
+  cursor: pointer;
   @media (max-width: 767px) {
     color: #ffffff;
   }
@@ -46,7 +48,7 @@ export const ContainerAside = styled.div`
   @media (min-width: 768px) {
     flex: 4;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     flex: 3;
   }
 `
@@ -63,24 +65,25 @@ export const ContainerForm = styled.div`
   @media (min-width: 768px) {
     flex: 5;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     flex: 2;
   }
 `
-
+//  background: linear-gradient(0deg, #130525 00%, #faf5ff 80%);
 export const FormContent = styled.div`
   justify-content: center;
 
   @media (max-width: 767px) {
     padding: 5% 7% 0 7%;
     z-index: 2;
-    background-color: #faf5ff;
+   
+    background:  linear-gradient(0deg, #130525 75px, #faf5ff 10px);
     border-radius: 8px;
   }
   @media (min-width: 768px) {
     padding: 50% 15% 0 15%;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     padding: 28% 35% 0 20%;
   }
 `
@@ -91,7 +94,7 @@ export const ContainerLogin = styled.div`
     z-index: 0;
     position: relative;
   }
-  @media (min-width: 102p4x) {
+  @media (min-width: 1025x) {
     display: flex;
   }
 `

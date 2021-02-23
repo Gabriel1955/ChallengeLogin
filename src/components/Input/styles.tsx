@@ -23,7 +23,7 @@ export const ContentInput = styled.div`
   & > div {
     position: absolute;
     color: #ff377f;
-    top: 62px;
+    top: 45px;
     right: 20px;
     z-index: 2;
   }
