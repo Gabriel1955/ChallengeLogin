@@ -1,7 +1,7 @@
 import { ReactElement, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useRouter } from 'next/router'
-import { ContainerHome } from './styles'
+import { ContainerHome } from '../../styles/home'
 import { Content } from '../../components'
 import { User } from '../../interfaces/User'
 

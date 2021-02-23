@@ -1,8 +1,8 @@
-import { ContainerAside, ContainerForm, ContainerLogin } from './styles'
+import { ContainerAside, ContainerForm, ContainerLogin } from '../../styles/login'
 import { Aside, Content } from '../../components'
-import Form from './form'
+import { FormLogin } from '../../components'
 import { useDispatch, useSelector } from 'react-redux'
-import { signInRequest } from './store/actions'
+import { signInRequest } from '../../store/login/actions'
 import { ReactElement, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { User } from '../../interfaces/User'
@@ -29,7 +29,7 @@ export default function Login(): ReactElement {
           <Aside />
         </ContainerAside>
         <ContainerForm>
-          <Form onsubmit={handleSubmmit} />
+          <FormLogin onsubmit={handleSubmmit} />
         </ContainerForm>
       </ContainerLogin>
     </Content>

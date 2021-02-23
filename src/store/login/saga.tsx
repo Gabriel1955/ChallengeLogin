@@ -1,6 +1,6 @@
 import { call, put, takeLatest } from 'redux-saga/effects'
 import { actionTypes, setUser, setError } from './actions'
-import HTTP from '../../../http'
+import HTTP from '../../http'
 
 function* login(data): unknown {
   try {

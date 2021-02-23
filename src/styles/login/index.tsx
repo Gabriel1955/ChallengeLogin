@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { ContainerHome } from '../home'
 
 export const ContainerButton = styled.div`
   @media (max-width: 767px) {
@@ -69,7 +70,6 @@ export const ContainerForm = styled.div`
     flex: 2;
   }
 `
-//  background: linear-gradient(0deg, #130525 00%, #faf5ff 80%);
 export const FormContent = styled.div`
   justify-content: center;
 
@@ -77,7 +77,7 @@ export const FormContent = styled.div`
     padding: 5% 7% 0 7%;
     z-index: 2;
 
-    background: linear-gradient(0deg, #130525 75px, #faf5ff 10px);
+    background: linear-gradient(0deg, #130525 75px, #faf5ff 60px);
     border-radius: 8px;
   }
   @media (min-width: 768px) {
@@ -98,3 +98,4 @@ export const ContainerLogin = styled.div`
     display: flex;
   }
 `
+export default { ContainerHome, ContainerLogin }

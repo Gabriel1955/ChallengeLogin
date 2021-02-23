@@ -1,5 +1,5 @@
-import { Footer, FormContent, ContainerButton, Link } from './styles'
-import { Input, Form, Button, Title, SubTitle } from '../../components'
+import { Footer, FormContent, ContainerButton, Link } from '../../../styles/login'
+import { Input, Form, Button, Title, SubTitle } from '../..'
 import { ReactElement } from 'react'
 
 function FormLogin({ onsubmit }): ReactElement {

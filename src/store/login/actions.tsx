@@ -1,4 +1,4 @@
-import { User } from '../../../interfaces/User'
+import { User } from '../../interfaces/User'
 export const actionTypes = {
   SIGN_IN_REQUEST: 'SIGN_IN_REQUEST',
   SET_USER: 'SET_USER',

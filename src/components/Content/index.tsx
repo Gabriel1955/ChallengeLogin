@@ -1,5 +1,5 @@
-import { Children, ReactElement } from 'react'
+import { ReactElement } from 'react'
 
 export default function Content({ children, show }): ReactElement {
-  return show ? children : <></>
+  return show ? children : <div />
 }
